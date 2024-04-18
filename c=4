@@ -1,0 +1,6 @@
+c=4
+def suma (a, b):
+    c= a + b
+    return b
+print(suma(5, 7))
+print(c)
