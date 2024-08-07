@@ -1,11 +1,9 @@
-# Solicita al usuario que ingrese 10 números
-numeros = []
-for i in range(10):
-    numero = int(input(f"Ingrese el número {i+1}: "))
-    numeros.append(numero)
+def pares():
+ numeros_pares = []
+ for i in range(10):
+    numero = int(input(f"Ingrese el numero : "))
+    if numero % 2 == 0:
+        numeros_pares.append(numero)
+        print("Numeros pares ingresados son :", numeros_pares)
 
-# Filtra los números pares
-numeros_pares = [numero for numero in numeros if numero % 2 == 0]
-
-# Imprime la lista de números pares
-print("Números pares ingresados:", numeros_pares)
+pares()
