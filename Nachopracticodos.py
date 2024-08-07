@@ -1,21 +1,13 @@
-print("Este programa cuenta la cantidad de letras")
-palabra = input("Ingrese la frase o palabra: ")
+print("Este programa cuenta la cantidad de vocales")
+frase = input("Ingrese la frase o palabra: ")
 
 contador_vocales = 0
 
-for i in palabra:  
-    if i == "a":
-        print (i, end="")
-    elif i == "e":
-        print (i, end="")
-        i == "i"
-        print (i, end="")
-        i == "o"
-        print (i, end="")
-        i == "u"
-        print(i, end="")
-    else:
-        print (i, end="")
+for i in frase:  
+    if i in "aeiouAEIOU":
+        print(i, end=" ")
         contador_vocales += 1
+    else:
+        print(i, end="")
 
-print(f"\nLa cantidad total de letras en la frase es: {contador_vocales}")
+print(f"\nLa cantidad total de vocales en la frase es de: {contador_vocales}")
