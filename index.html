@@ -8,56 +8,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <header class="header">
-          <div class = "logo">
+    <header class="header">
+        <div class="logo">
             <img src="img/pets.jpg" alt="pets Logo">
-          
-            <div class="search-container"> 
-              <input type="text" id="search-input" placeholder="Buscar...">
-              <button id="search-button">Buscar</button>
-          </div>
-          
-      </header>
-      <hr>
-      <nav>
-          <a href="index.html">Inicio</a>
-      </nav>
+        </div>
+        <div class="search-container"> 
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-button">Buscar</button>
+        </div>
+    </header>
+    <hr>
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav>
 
-      <main>
-          <section class="Vet-locations">
-          <h2>veterinarias en la zona</h2>
-          <button data-localidad="villa giardino">villagiardino</button>
-          <button data-localidad="huerta grande">huertagrande</button>
-          <button data-localidad="valle hermoso">vallehermoso</button>
-          <button data-localidad="la falda">lafalda</button>
-          </section>
+    <main>
+        <section class="Vet-locations">
+            <h2>Veterinarias en la zona</h2>
+            <button data-localidad="villa giardino">Villa Giardino</button>
+            <button data-localidad="huerta grande">Huerta Grande</button>
+            <button data-localidad="valle hermoso">Valle Hermoso</button>
+            <button data-localidad="la falda">La Falda</button>
+        </section>
 
-          <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="..." class="d-block w-100" alt="...">
+                    <img src="..." class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="...">
+                    <img src="..." class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="...">
+                    <img src="..." class="d-block w-100" alt="...">
                 </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-              </button>
-            </div>
+            </button>
+        </div>
 
-            <button class="btn-nariz"></button>
-        </section>
-        <section></section>
-        <section></section>
+        <button class="btn-nariz"></button>
     </main>
 
     <footer class="textoNegro">
@@ -69,6 +65,19 @@
         <hr/>
         <p>Consulta más sobre <a href="https://www.humanesociety.org/resources/health-pet" target="_blank">la salud de tu mascota</a>.</p>
     </footer> 
-    <script type="text/javascript"></script>
+
+    <!-- Script para el buscador -->
+    <script type="text/javascript">
+        document.getElementById("search-button").addEventListener("click", function() {
+            const query = document.getElementById("search-input").value;
+            if (query) {
+                alert("Buscando: " + query); // Para prueba: muestra el texto buscado
+                // Aquí puedes realizar la acción deseada, como redirigir o buscar en la base de datos
+                // Por ejemplo, podrías hacer: window.location.href = `search.html?query=${query}`;
+            } else {
+                alert("Por favor, ingresa un término de búsqueda.");
+            }
+        });
+    </script>
 </body>
 </html>
