@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     const inputBusqueda = document.getElementById('search-input');
     const botonesVet = document.querySelectorAll('.Vet-locations button');
+    const searchResults = [];
 
     inputBusqueda.addEventListener('input', function() {
         filtroVetLocalidad();
@@ -18,3 +19,6 @@ document.addEventListener('DOMContentLoaded', function(){
         });  
     }
 });
+
+//[data-localidad]
+
